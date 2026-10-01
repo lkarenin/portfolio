@@ -260,9 +260,14 @@ h1,h2,h3,h4,h5,h6{letter-spacing:0em!important}
 .home-projects .cover.mam .mam-cover-image{z-index:0}
 .home-projects .cover.mam .mam-cover-video{z-index:1}
 .home-projects .cover.mam .mark,.home-projects .cover.mam .label{display:none}
-.home-projects .cover.maize{isolation:isolate}
-.home-projects .cover.maize .maizebus-cover-video{position:absolute;z-index:1;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:0;transition:opacity .25s ease}
+.home-projects .cover.maize{isolation:isolate;background:#eceee9}
+.home-projects .cover.maize .maizebus-cover-video,.home-projects .cover.maize .maizebus-cover-poster{position:absolute;z-index:1;top:50%;left:50%;width:100%;height:76%;transform:translate(-50%,-50%);object-fit:contain;object-position:center}
+.home-projects .cover.maize .maizebus-cover-video{opacity:0;transition:opacity .25s ease}
+.home-projects .cover.maize .maizebus-cover-poster{z-index:2;opacity:0;transition:opacity .25s ease}
+.home-projects .cover.maize .maizebus-cover-poster[data-ready=true]{opacity:1}
 .home-projects .card:hover .cover.maize .maizebus-cover-video,.home-projects .card:focus-within .cover.maize .maizebus-cover-video{opacity:1}
+.home-projects .card:hover .cover.maize .maizebus-cover-poster,.home-projects .card:focus-within .cover.maize .maizebus-cover-poster{opacity:0}
+.home-projects .cover.maize .mark,.home-projects .cover.maize .label{transition:opacity .25s ease}
 .home-projects .card:hover .cover.maize .mark,.home-projects .card:hover .cover.maize .label,.home-projects .card:focus-within .cover.maize .mark,.home-projects .card:focus-within .cover.maize .label{opacity:0}
 
 /* Keep the home identity rail fixed while the Play and About columns scroll. */
