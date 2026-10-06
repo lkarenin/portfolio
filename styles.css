@@ -724,12 +724,17 @@ html:has(.play-main),body:has(.play-main){height:100%;overflow:hidden}
 /* Typography roles from the supplied reference. */
 @font-face{font-family:'Raftwork';src:url('./assets/fonts/Raftwork-Regular.otf') format('opentype');font-style:normal;font-weight:400;font-display:swap}
 @font-face{font-family:'Season Sans';src:url('./assets/fonts/SeasonSans-Regular-Trial.otf') format('opentype');font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:'Season Sans';src:url('./assets/fonts/SeasonSans-Medium-Trial.otf') format('opentype');font-style:normal;font-weight:500;font-display:swap}
+@font-face{font-family:'Season Sans';src:url('./assets/fonts/SeasonSans-Semibold-Trial.otf') format('opentype');font-style:normal;font-weight:600;font-display:swap}
+@font-face{font-family:'Season Sans';src:url('./assets/fonts/SeasonSans-Bold-Trial.otf') format('opentype');font-style:normal;font-weight:700;font-display:swap}
+@font-face{font-family:'Season Mix';src:url('./assets/fonts/SeasonMix-Regular-Trial.otf') format('opentype');font-style:normal;font-weight:400;font-display:swap}
 @font-face{font-family:'Season Mix';src:url('./assets/fonts/SeasonMix-Medium-Trial.otf') format('opentype');font-style:normal;font-weight:500;font-display:swap}
-:root{--font-title:'Season Mix',Georgia,serif;--font-display:'Raftwork',Georgia,serif;--font-subhead:'Archivo',Arial,sans-serif;--font-body:'Season Sans',Arial,sans-serif}
+@font-face{font-family:'Season Mix';src:url('./assets/fonts/SeasonMix-Semibold-Trial.otf') format('opentype');font-style:normal;font-weight:600;font-display:swap}
+:root{--font-title:'Season Mix',Georgia,serif;--font-display:'Raftwork',Georgia,serif;--font-subhead:'Season Sans',Arial,sans-serif;--font-body:'Season Sans',Arial,sans-serif}
 body,button,input,textarea,select,p,li,figcaption,blockquote,.fact span{font-family:var(--font-body)!important}
 body,button,input,textarea,select,p,li,figcaption,blockquote,.fact span{font-weight:400!important}
 body,p,li,figcaption,blockquote,.fact span{text-wrap:balance!important}
-h1,h2,h3,h4,h5,h6,.case-intro h1,.page-head h1,.home-intro h1,.case-content h2,.case-heading h2,.home-signature strong,.wordmark,.intro,.card h2,.home-projects .card h2,.learning-title,.feature-copy h2,.connect h2,.section h3,.section h2,.solution-step-copy h3,.process-group-title,.mam-process-copy h3,.case-goal h3{font-family:var(--font-title)!important;font-weight:500!important;}
+h1,h2,h3,h4,h5,h6,.case-intro h1,.page-head h1,.home-intro h1,.case-content h2,.case-heading h2,.home-signature strong,.wordmark,.intro,.card h2,.home-projects .card h2,.learning-title,.feature-copy h2,.connect h2,.section h3,.section h2,.solution-step-copy h3,.process-group-title,.mam-process-copy h3,.case-goal h3{font-family:var(--font-title)!important;font-weight:600!important;}
 .nav a,.eyebrow,.meta,.fact b,.case-label,.case-hero .placeholder-tag,.media-placeholder span,.cover .label,.home-weather,.visitor-trigger,.mailbox-kicker,.home-footer,.back,.chips span,.listline b,.listline span,.case-intro .eyebrow,.case-toc-link,.mam-process-group-label,.downloads-metric-top,.solution-step-number{font-family:var(--font-subhead)!important;font-weight:700!important}
 .mam-impact-number,.downloads-metric-values>div strong{font-family:var(--font-display)!important;font-weight:400!important;}
 
@@ -822,3 +827,8 @@ html:has(.play-main),body:has(.play-main){height:auto;min-height:100%;overflow-x
 /* Restore the browser's default tracking for all text. */
 *,*::before,*::after{letter-spacing:normal!important}
 .home-signature strong{color:#000!important}
+body:has(.home-main) .home-overview p{color:#000!important}
+.mam-problem-copy p{color:#000!important}
+.maizebus-case-page #case-section-0>.case-content p{color:#000!important}
+.maizebus-case-page #case-section-0>.case-content a{text-decoration:underline;text-underline-offset:.15em}
+p,li,figcaption,blockquote{color:#000!important}
