@@ -736,6 +736,8 @@ body,button,input,textarea,select,p,li,figcaption,blockquote,.fact span{font-wei
 body,p,li,figcaption,blockquote,.fact span{text-wrap:balance!important}
 h1,h2,h3,h4,h5,h6,.case-intro h1,.page-head h1,.home-intro h1,.case-content h2,.case-heading h2,.home-signature strong,.wordmark,.intro,.card h2,.home-projects .card h2,.learning-title,.feature-copy h2,.connect h2,.section h3,.section h2,.solution-step-copy h3,.process-group-title,.mam-process-copy h3,.case-goal h3{font-family:var(--font-title)!important;font-weight:600!important;}
 .nav a,.eyebrow,.meta,.fact b,.case-label,.case-hero .placeholder-tag,.media-placeholder span,.cover .label,.home-weather,.visitor-trigger,.mailbox-kicker,.home-footer,.back,.chips span,.listline b,.listline span,.case-intro .eyebrow,.case-toc-link,.mam-process-group-label,.downloads-metric-top,.solution-step-number{font-family:var(--font-subhead)!important;font-weight:700!important}
+.case-page .case-label,.case-page .learning-label{font-size:14px!important}
+.case-page .case-label,.case-page .learning-label{color:var(--accent)!important}
 .mam-impact-number,.downloads-metric-values>div strong{font-family:var(--font-display)!important;font-weight:400!important;}
 
 /* MAM case hero: editorial title on the left, compact metadata on the right. */
@@ -813,15 +815,28 @@ html:has(.play-main),body:has(.play-main){height:auto;min-height:100%;overflow-x
 /* Give the MaizeBus opening sections full-width headings and two-column copy. */
 .maizebus-case-page #case-section-0,
 .maizebus-case-page #case-section-1{grid-template-columns:minmax(0,1fr);row-gap:20px}
+.maizebus-case-page #case-section-2{grid-template-columns:minmax(0,1fr);row-gap:20px}
 .maizebus-case-page #case-section-0>.case-heading,
-.maizebus-case-page #case-section-1>.case-heading{grid-column:1;width:100%}
+.maizebus-case-page #case-section-1>.case-heading,
+.maizebus-case-page #case-section-2>.case-heading{grid-column:1;width:100%}
 .maizebus-case-page #case-section-0>.case-content,
-.maizebus-case-page #case-section-1>.case-content{grid-column:1;column-count:2;column-gap:48px;max-width:none}
+.maizebus-case-page #case-section-1>.case-content,
+.maizebus-case-page #case-section-2>.case-content{grid-column:1;column-count:2;column-gap:48px;max-width:none}
 .maizebus-case-page #case-section-0>.case-content p,
 .maizebus-case-page #case-section-1>.case-content p{break-inside:avoid}
+.maizebus-case-page #case-section-0>.case-content p{margin-bottom:12px}
+.maizebus-case-page #case-section-0>.case-full-width-copy{grid-column:1/-1;max-width:none;margin:0}
+.maizebus-opportunity-lead{width:100%;max-width:900px;margin:0 auto 46px;padding:120px 0;text-align:center}
+.maizebus-opportunity-lead>.eyebrow{margin:0 0 8px;color:var(--accent);font-size:14px;text-align:center}
+.maizebus-opportunity-lead h2{margin:0 auto 14px;font:600 clamp(23px,3.2vw,36px)/1.16 var(--font-title);color:#000}
+.maizebus-opportunity-lead p{max-width:760px;margin:0 auto;font:400 16px/1.7 var(--font-body);color:#000}
+.maizebus-case-page #case-section-1>.case-content{column-count:1}
+.maizebus-case-page #case-section-2>.case-content{column-count:1}
 @media(max-width:700px){
  .maizebus-case-page #case-section-0>.case-content,
- .maizebus-case-page #case-section-1>.case-content{column-count:1;column-gap:0}
+ .maizebus-case-page #case-section-1>.case-content,
+ .maizebus-case-page #case-section-2>.case-content{column-count:1;column-gap:0}
+ .maizebus-opportunity-lead p{font-size:15px}
 }
 
 /* Restore the browser's default tracking for all text. */
@@ -847,4 +862,42 @@ p,li,figcaption,blockquote{color:#000!important}
  .maizebus-case-page .case-intro h1{font-size:clamp(30px,7vw,38px);margin:10px 0 22px}
  .maizebus-case-page .case-intro .case-hero{aspect-ratio:1.3;margin-bottom:26px}
  .maizebus-case-page .case-intro .facts{grid-template-columns:1fr 1fr;gap:24px 18px}
+}
+
+/* Scroll through both transit statistics between the Problem heading and copy. */
+.maizebus-case-page #case-section-0>.problem-stat-story{grid-column:1;position:relative;height:min(37svh,336px);min-height:216px;margin:0 0 5px}
+.problem-stat-stage{position:relative;height:100%;overflow:hidden}
+.problem-stat-state{position:absolute;inset:0;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(250px,.85fr);grid-template-rows:minmax(0,1fr);align-items:center;gap:clamp(12px,1.8vw,24px);padding:clamp(8px,2vw,28px);opacity:0;visibility:visible;pointer-events:none;transition:opacity .65s ease}
+.problem-stat-state[data-problem-stat-state="weekly"]{opacity:1}
+.is-second-state .problem-stat-state[data-problem-stat-state="weekly"]{opacity:0}
+.is-second-state .problem-stat-state[data-problem-stat-state="satisfaction"]{opacity:1}
+.problem-stat-state img{display:block;width:100%;height:100%;min-height:0;max-height:100%;aspect-ratio:auto;object-fit:contain;border:0}
+.problem-stat-copy{max-width:490px;color:#000}
+.problem-stat-copy h3{margin:0 0 5px;font:600 clamp(25px,3.6vw,46px)/1.02 var(--font-title);color:#000}
+.problem-stat-copy h3 em{font-style:italic;font-weight:500}
+.problem-stat-copy p{margin:0;font:500 clamp(12px,1.5vw,19px)/1.25 var(--font-body);color:#000}
+.problem-stat-letter{display:inline-block;opacity:0;transform:translateY(.3em);transition:opacity .24s ease,transform .32s ease;transition-delay:calc(var(--letter-index)*16ms)}
+.is-second-state .problem-stat-letter{opacity:1;transform:translateY(0)}
+@media(max-width:700px){
+ .maizebus-case-page #case-section-0>.problem-stat-story{height:32svh;min-height:204px;margin-bottom:3px}
+ .problem-stat-state{grid-template-columns:1fr;grid-template-rows:minmax(0,1fr) auto;gap:14px;padding:8px 0}
+ .problem-stat-state img{width:min(100%,480px);height:100%;margin:auto}
+ .problem-stat-copy{max-width:100%;padding:0 8px 8px}
+ .problem-stat-copy h3{font-size:clamp(23px,6vw,35px)}
+ .problem-stat-copy p{font-size:12px}
+}
+@media(prefers-reduced-motion:reduce){.problem-stat-state,.problem-stat-letter{transition:none;transition-delay:0}}
+
+/* Use the MaizeBus title, cover, then metadata layout across all case studies. */
+.case-page .case-intro{display:block;width:100%;max-width:none;margin-left:0;transform:none;padding-bottom:30px}
+.case-page .case-intro h1{max-width:none;font-size:clamp(30px,4.2vw,44px);line-height:1.08;margin:10px 0 26px;text-wrap:balance}
+.case-page .case-intro>.case-hero{display:block;width:100%;max-width:none;aspect-ratio:2.55;margin:0 auto 34px}
+.case-page .case-intro>.facts{position:static;top:auto;right:auto;display:grid;grid-template-columns:.8fr 1fr 1.1fr 2fr;align-items:start;width:100%;height:auto;gap:28px;margin:0 0 28px;padding:0;border:0}
+.case-page .case-intro .fact b{color:var(--accent)!important}
+.case-page .case-intro .fact span{color:#000}
+@media(max-width:700px){
+ .case-page .case-intro{width:100%}
+ .case-page .case-intro h1{font-size:clamp(30px,7vw,38px);margin:10px 0 22px}
+ .case-page .case-intro>.case-hero{aspect-ratio:1.3;margin-bottom:26px}
+ .case-page .case-intro>.facts{grid-template-columns:1fr 1fr;gap:24px 18px}
 }
