@@ -1,0 +1,4 @@
+Mode: built-in image_gen edit, followed by export at 3520 x 2113 pixels.
+
+Prompt:
+Edit target: supplied screenshot. Use case: precise-object-edit. Increase resolution and clarity of this exact screenshot to approximately 3520x2112 pixels, preserving the entire composition, browser chrome, Amazon background and Snuffed checkout overlay exactly. Preserve all existing text verbatim and positions; sharpen typography and UI edges without inventing text or changing colors. Keep the flame buddy and original layout. Remove only the video play/pause controls overlaid on screenshot (black circular play button at left center and black pause button at bottom left), and remove the large mouse pointer near bottom right, reconstructing underlying pixels. Output flat screenshot only; no laptop frame, no perspective, no margins. The page will add its laptop frame separately.
