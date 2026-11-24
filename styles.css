@@ -1628,3 +1628,7 @@ body:has(.home-main){height:auto!important;min-height:100svh!important;overflow-
 body:has(.home-main) .connect-footer,body:has(.about-main) .connect-footer,body:has(.play-main) .connect-footer{position:relative;z-index:1;right:auto;bottom:auto;left:auto;transform:none;opacity:1;pointer-events:auto}
 @media(max-width:650px){.connect-footer-inner{min-height:148px}.footer-nav{gap:12px;margin-top:10px}.footer-nav a{font-size:10px}}
 #top.play-main.is-experiments{margin-bottom:0!important}
+/* The fixed case-study footer sits behind the page, so leave enough scroll room
+   to reveal its expanded content including the footer navigation. */
+.case-page{margin-bottom:190px!important}
+@media(max-width:650px){.case-page{margin-bottom:176px!important}}
